@@ -4,16 +4,16 @@ A simple script to add sample and associated genotypes information to vcf file o
 ## Plan
 ### Class read:
 1. Get metadata
-- [ ] Read vcf with file handler
-- [ ] Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
-- [ ] Get header
+   - [ ] Read vcf with file handler
+   - [ ] Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
+   - [ ] Get header
 2. Get records
-- [ ] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
+   - [ ] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
 3. Formating functions
-- [ ] add_FORMAT_to_metadata -> metadata
-- [ ] add_FORMAT_to_header -> header
-- [ ] add_SAMPLE_to_header -> header
-- [ ] update_record -> update record with the NEW FORMAT and sample Genotype informations
+   - [ ] add_FORMAT_to_metadata -> metadata
+   - [ ] add_FORMAT_to_header -> header
+   - [ ] add_SAMPLE_to_header -> header
+   - [ ] update_record -> update record with the NEW FORMAT and sample Genotype informations
 ### Class write:
 1. Updat metadata and header:
    - [ ] Open output vcf with wright rights with file handler
