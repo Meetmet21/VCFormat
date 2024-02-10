@@ -2,7 +2,7 @@
 
 ## Plan
 1. Class read:
-   1.1 Get metadata
+   1 Get metadata
      1.1.1 Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
      1.1.2 Get header and fill lacking headers
    1.2 Get records
