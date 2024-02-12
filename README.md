@@ -10,8 +10,8 @@ A simple script to add sample and associated genotypes information to vcf file o
 2. Get records
    - [X] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
 3. Formating functions
-   - [ ] add_FORMAT_to_metadata -> metadata
-   - [ ] add_FORMAT_to_header -> header
+   - [X] add_FORMAT_to_metadata -> metadata
+   - [X] add_FORMAT_to_header -> header
    - [ ] add_SAMPLE_to_header -> header
    - [ ] update_record -> update record with the NEW FORMAT and sample Genotype informations
 ### Class write:
