@@ -12,8 +12,8 @@ A simple script to add sample and associated genotypes information to vcf file o
 3. Formating functions
    - [X] add_FORMAT_to_metadata -> metadata
    - [X] add_FORMAT_to_header -> header
-   - [ ] add_SAMPLE_to_header -> header
-   - [ ] update_record -> update record with the NEW FORMAT and sample Genotype informations
+   - [X] add_SAMPLE_to_header -> header
+   - [X] update_record -> update record with the NEW FORMAT and sample Genotype informations
 ### Class write:
 1. Updat metadata and header:
    - [ ] Open output vcf with wright rights with file handler
