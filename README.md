@@ -4,9 +4,9 @@ A simple script to add sample and associated genotypes information to vcf file o
 ## Plan
 ### Class read:
 1. Get metadata
-   - [ ] Read vcf with file handler
-   - [ ] Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
-   - [ ] Get header
+   - [X] Read vcf with file handler
+   - [X] Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
+   - [X] Get header
 2. Get records
    - [ ] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
 3. Formating functions
