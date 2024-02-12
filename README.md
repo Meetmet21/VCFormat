@@ -8,7 +8,7 @@ A simple script to add sample and associated genotypes information to vcf file o
    - [X] Convinient data structure to get different vcf format fields as INFO, FILTER, etc and easy access
    - [X] Get header
 2. Get records
-   - [ ] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
+   - [X] Convinient data structure to seperate each columns value as CHR, ID, REF..etc
 3. Formating functions
    - [ ] add_FORMAT_to_metadata -> metadata
    - [ ] add_FORMAT_to_header -> header
