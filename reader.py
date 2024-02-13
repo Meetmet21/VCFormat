@@ -89,7 +89,7 @@ class Reader:
 
         return out
 
-    def add_new_FORMAT(self, fid, fnumber, ftype, fdescription):
+    def add_new_FORMAT(self, fid: str, fnumber: int, ftype: str, fdescription: str):
         """
         Add to metadata new FORMAT tag information, update records FORMAT section
         :return: New FORMAT in metadata and records
@@ -122,7 +122,9 @@ class Reader:
         print(f"Check if samples values correspond to new FORMAT field tags."
               f"\nCurrent number of tags in FORMAT field is {num_tag}.")
 
-    def add_sample(self, id="NA", assay="NA", ethnicity="NA", disease="NA", tissue="NA", description="NA", tags_value = None):
+    def add_sample(self, id: str, assay: str = "NA", 
+                   ethnicity: str = "NA", disease: str = "NA", 
+                   tissue: str = "NA", description: str, tags_value: list[str] = None):
         """
         Add sample information, according to VCF v4.4 specifications, to metadata, header and records.
         :param id: Sample id
@@ -174,6 +176,37 @@ class Reader:
             for index in range(len(self.records)):
                 self.records[index][id] = re.sub(r"\w+", '1', self.records[index]["FORMAT"])
 
+    def add_new_INFO(self, id: str, number: int, itype: str, description: str, tag_value: list[str] = "NA"):
+        """
+        Add to metadata new INFO tag information, update records INFO section.
+        :param id: INFO id.
+        :param number: INFO number.
+        :param itype: INFO type.
+        :param description: INFO description.
+        :param tag_value: list of strings containing new tag value for each record following the vcf records order.
+                If no value provided, the tag value is set to NA in vcf.
+        :return: Update metadata and records for new INFO tag.
+        """
+        metadata_INFO = (f"##FORMAT=<ID={id},Number={str(number)},"
+                      f"Type={itype},Description=\"{description}\">")
+        # Extend INFO metadata
+        self.metadata["INFO"].append(metadata_INFO)
+        # If tag values provided
+        if tag_value != "NA":
+            # match between num records and num tag values
+            if len(self.records) != len(tag_value):
+                print("Some values are missing for certain records. Please fix it.")
+                exit(1)
+            # Considers INF as already present in header
+            # Add tag and value to records
+            for index in range(len(self.records)):
+                self.records[index]["INFO"] += f";{id}={tag_value[index]}"
+        # Fill with NA if tag_values not provided
+        else:
+            # Considers INF as already present in header
+            # Add tag and value to records
+            for index in range(len(self.records)):
+                self.records[index]["INFO"] += f";{id}={tag_value}"
 
 
 
