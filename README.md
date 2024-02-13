@@ -1,6 +1,6 @@
 # VCFormat
 ## Description
-A simple script to add sample and associated genotypes information to vcf file or vcf.gz file.
+A simple script to add sample and associated genotypes information to vcf file.
 ## Plan
 ### Class read:
 1. Get metadata
@@ -16,7 +16,7 @@ A simple script to add sample and associated genotypes information to vcf file o
    - [X] update_record -> update record with the NEW FORMAT and sample Genotype informations
 ### Class write:
 1. Updat metadata and header:
-   - [ ] Open output vcf with wright rights with file handler
-   - [ ] update_description -> write updated metadata and header
+   - [X] Open output vcf with wright rights with file handler
+   - [X] update_description -> write updated metadata and header
 3. Update records with new sample informations
-   - [ ] Write current record
+   - [X] Write current record
