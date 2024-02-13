@@ -122,9 +122,9 @@ class Reader:
         print(f"Check if samples values correspond to new FORMAT field tags."
               f"\nCurrent number of tags in FORMAT field is {num_tag}.")
 
-    def add_sample(self, id: str, assay: str = "NA", 
+    def add_sample(self, id: str, description: str, assay: str = "NA", 
                    ethnicity: str = "NA", disease: str = "NA", 
-                   tissue: str = "NA", description: str, tags_value: list[str] = None):
+                   tissue: str = "NA", tags_value: list[str] = None):
         """
         Add sample information, according to VCF v4.4 specifications, to metadata, header and records.
         :param id: Sample id
