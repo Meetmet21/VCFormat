@@ -20,7 +20,7 @@ class Writer:
         Reader object.
         :return: String
         """
-        return "\t".join(self.reader.header)
+        return "\t".join(self.reader.header) + "\n"
 
     def _write_metadata(self) -> str:
         """
